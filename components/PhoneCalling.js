@@ -228,7 +228,7 @@ const PhoneCalling = () => {
                 <CallAndEndButton isCalling={isCalling} onClick={clickHandler} />
                 {!isCalling && !connecting && (
                     <a
-                        href="https://chat.drhelmy.com"
+                        href="https://eureka-chat.takhaial.com/"
                         className="call-button btn-gold-outline absolute left-1/2 -translate-x-1/2 bottom-[12%] px-6 py-2.5 text-sm whitespace-nowrap"
                     >
                         Go to Chat
