@@ -185,8 +185,8 @@ const PhoneCalling = () => {
 
     useEffect(() => {
         timeline.pause();
-        timeline.to(".brand-logo-call", { top: "4%" });
-        timeline.to(".call-button", { bottom: "4%" }, "<");
+        timeline.to(".brand-logo-call", { y: -60 });
+        timeline.to(".call-button", { y: 60 }, "<");
         timeline.to(".call-button .icon", { rotate: 135 }, "<");
         timeline.to(".call-info", { opacity: 1 });
     }, [timeline]);
@@ -222,14 +222,14 @@ const PhoneCalling = () => {
 
     return (
         <section className="w-full mx-auto flex flex-col">
-            <div className="relative flex justify-center items-center h-[420px]">
+            <div className="flex flex-col items-center justify-center gap-6 py-10">
                 <EurekaLogo isCalling={!!isCalling} />
                 <OnGoingCall time={time} connecting={connecting} />
                 <CallAndEndButton isCalling={isCalling} onClick={clickHandler} />
                 {!isCalling && !connecting && (
                     <a
                         href="https://eureka-chat.takhaial.com/"
-                        className="call-button btn-outline-primary absolute left-1/2 -translate-x-1/2 bottom-[8%] px-6 py-2.5 text-sm whitespace-nowrap"
+                        className="btn-outline-primary px-6 py-2.5 text-sm whitespace-nowrap rounded-full"
                     >
                         Go to Chat
                     </a>
