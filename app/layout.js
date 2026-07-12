@@ -22,7 +22,7 @@ export const metadata = {
     title: "Eureka Kuwait — Voice Assistant",
     description: "Speak with Eureka's AI voice assistant. Discover electronics, home appliances and offers.",
     icons: {
-        icon: "/eureka-logo-green.png",
+        icon: "/favicon.png",
     },
 };
 

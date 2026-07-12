@@ -222,9 +222,8 @@ const PhoneCalling = () => {
 
     return (
         <section className="w-full mx-auto flex flex-col">
-            <div className="flex flex-col items-center justify-center gap-6 py-10">
+            <div className="relative flex flex-col items-center justify-center gap-6 py-14 overflow-hidden">
                 <EurekaLogo isCalling={!!isCalling} />
-                <OnGoingCall time={time} connecting={connecting} />
                 <CallAndEndButton isCalling={isCalling} onClick={clickHandler} />
                 {!isCalling && !connecting && (
                     <a
@@ -234,6 +233,10 @@ const PhoneCalling = () => {
                         Go to Chat
                     </a>
                 )}
+                {/* Timer is absolutely centered so it never affects flex spacing */}
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <OnGoingCall time={time} connecting={connecting} />
+                </div>
             </div>
             <audio ref={audioElement} preload="auto" playsInline loop={false}>
                 <source src={RINGTONE_SRC} type="audio/mpeg" />
