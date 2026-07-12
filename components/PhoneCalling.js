@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import CallAndEndButton from "./CallAndEndButton";
-import ToyotaLogo from "./ToyotaLogo";
+import EurekaLogo from "./EurekaLogo";
 import gsap from "gsap";
 import OnGoingCall from "./OnGoingCall";
 import { useConversation } from "@11labs/react";
@@ -221,15 +221,15 @@ const PhoneCalling = () => {
     };
 
     return (
-        <section className="voice-card w-full min-h-[580px] sm:min-h-[640px] mx-auto flex flex-col flex-1">
-            <div className="relative flex-1 flex justify-center items-center bg-gradient-to-b from-stone-50 to-stone-100 min-h-[520px]">
-                <ToyotaLogo />
+        <section className="w-full min-h-[520px] sm:min-h-[580px] mx-auto flex flex-col flex-1">
+            <div className="relative flex-1 flex justify-center items-center min-h-[460px]">
+                <EurekaLogo isCalling={!!isCalling} />
                 <OnGoingCall time={time} connecting={connecting} />
                 <CallAndEndButton isCalling={isCalling} onClick={clickHandler} />
                 {!isCalling && !connecting && (
                     <a
                         href="https://eureka-chat.takhaial.com/"
-                        className="call-button btn-gold-outline absolute left-1/2 -translate-x-1/2 bottom-[12%] px-6 py-2.5 text-sm whitespace-nowrap"
+                        className="call-button btn-outline-primary absolute left-1/2 -translate-x-1/2 bottom-[12%] px-6 py-2.5 text-sm whitespace-nowrap"
                     >
                         Go to Chat
                     </a>
