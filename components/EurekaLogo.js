@@ -9,7 +9,7 @@ import Image from "next/image";
  */
 const EurekaLogo = ({ isCalling = false }) => {
     return (
-        <div className="brand-logo-call flex flex-col items-center absolute left-1/2 -translate-x-1/2 top-[18%] w-full transition-all duration-700 ease-in-out">
+        <div className="brand-logo-call flex flex-col items-center absolute left-1/2 -translate-x-1/2 top-[12%] w-full transition-all duration-700 ease-in-out">
             {/* Outer pulse rings — visible during active call */}
             {isCalling && (
                 <>

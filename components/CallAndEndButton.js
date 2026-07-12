@@ -5,7 +5,7 @@ const CallAndEndButton = ({ onClick, isCalling }) => {
     return (
         <button
             onClick={onClick}
-            className={`call-button absolute left-1/2 -translate-x-1/2 bottom-[22%] flex items-center gap-3 px-3 py-3 rounded-full cursor-pointer transition-all duration-300 ${
+            className={`call-button absolute left-1/2 -translate-x-1/2 bottom-[20%] flex items-center gap-3 px-3 py-3 rounded-full cursor-pointer transition-all duration-300 ${
                 isCalling ? "btn-end" : "btn-call"
             }`}
         >
