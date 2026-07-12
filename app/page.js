@@ -144,7 +144,6 @@ export default function Page() {
                 className="relative z-20 flex h-14 shrink-0 items-center justify-between px-4"
                 style={{
                     borderBottom: "1px solid var(--border)",
-                    background: "rgba(var(--background), 0.8)",
                     backdropFilter: "blur(12px)",
                     WebkitBackdropFilter: "blur(12px)",
                     backgroundColor: isDark ? "rgba(13, 26, 7, 0.8)" : "rgba(244, 248, 238, 0.8)",
@@ -165,16 +164,18 @@ export default function Page() {
                     <span className="hidden sm:inline">Chat Agent</span>
                 </a>
 
-                {/* Logo */}
+                {/* Logo — absolutely centered so it's always in the exact middle */}
                 {mounted && (
-                    <Image
-                        src={logoSrc}
-                        alt="Eureka"
-                        width={110}
-                        height={34}
-                        className="h-8 w-auto object-contain"
-                        priority
-                    />
+                    <div className="absolute left-1/2 -translate-x-1/2">
+                        <Image
+                            src={logoSrc}
+                            alt="Eureka"
+                            width={110}
+                            height={34}
+                            className="h-8 w-auto object-contain"
+                            priority
+                        />
+                    </div>
                 )}
 
                 <ThemeToggle />
@@ -207,7 +208,7 @@ export default function Page() {
 
                     {/* Glassmorphism card */}
                     <div
-                        className="rounded-3xl overflow-hidden shadow-2xl"
+                        className="rounded-3xl shadow-2xl"
                         style={{
                             border: "1px solid var(--border)",
                             background: isDark ? "rgba(21, 34, 16, 0.85)" : "rgba(232, 244, 216, 0.85)",
