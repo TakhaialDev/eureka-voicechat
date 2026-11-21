@@ -316,7 +316,7 @@ const PhoneCalling = () => {
                 )}
                 {!isCalling && !connecting && (
                     <a
-                        href="https://eureka-chat.takhaial.com/"
+                        href="https://chat-eureka.takhaial.com/"
                         className="btn-outline-primary px-6 py-2.5 text-sm whitespace-nowrap rounded-full"
                     >
                         Go to Chat

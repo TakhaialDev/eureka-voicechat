@@ -15,7 +15,7 @@ const PARTICLES = Array.from({ length: 18 }, (_, i) => ({
     delay: ((i * 3.3) % 9).toFixed(1),
 }));
 
-const CHAT_URL = process.env.NEXT_PUBLIC_CHAT_AGENT_URL || "https://eureka-chat.takhaial.com/";
+const CHAT_URL = process.env.NEXT_PUBLIC_CHAT_AGENT_URL || "https://chat-eureka.takhaial.com/";
 
 function ThemeToggle() {
     const { resolvedTheme, setTheme } = useTheme();
